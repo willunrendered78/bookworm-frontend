@@ -1,0 +1,268 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient: Deep Ink-Navy Nocturne -->
+    <radialGradient id="skyGrad" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#141C2E" />
+      <stop offset="60%" stop-color="#0B101D" />
+      <stop offset="100%" stop-color="#05070D" />
+    </radialGradient>
+
+    <!-- Amber Glow: Volumetric Lantern Core -->
+    <radialGradient id="amberGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE082" stop-opacity="1" />
+      <stop offset="30%" stop-color="#FF9E1B" stop-opacity="0.85" />
+      <stop offset="70%" stop-color="#FF6F00" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FF6F00" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="lanternHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFB300" stop-opacity="0.45" />
+      <stop offset="50%" stop-color="#FF8F00" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#0B101D" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Warm Paper Cream Gradient -->
+    <linearGradient id="paperCream" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF7" />
+      <stop offset="65%" stop-color="#F4EBD9" />
+      <stop offset="100%" stop-color="#E2D0B0" />
+    </linearGradient>
+
+    <!-- Shading Masks & Gradients for Cel Shadows -->
+    <linearGradient id="bookShadow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0A0E1A" stop-opacity="0.75" />
+      <stop offset="50%" stop-color="#0A0E1A" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0A0E1A" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="hardCelShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181F33" />
+      <stop offset="100%" stop-color="#0E1322" />
+    </linearGradient>
+
+    <!-- Soft Filter for Atmospheric Amber Bokeh -->
+    <filter id="moteBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" />
+    </filter>
+  </defs>
+
+  <!-- ================= BACKGROUND ================= -->
+  <rect width="800" height="800" fill="url(#skyGrad)" />
+
+  <!-- Atmospheric Night Dust / Golden Motes -->
+  <g opacity="0.6">
+    <circle cx="180" cy="220" r="2.5" fill="#FFC107" opacity="0.4" filter="url(#moteBlur)" />
+    <circle cx="260" cy="140" r="1.5" fill="#FFE082" opacity="0.3" />
+    <circle cx="610" cy="280" r="2" fill="#FFB300" opacity="0.35" filter="url(#moteBlur)" />
+    <circle cx="560" cy="180" r="3" fill="#FFE082" opacity="0.2" />
+    <circle cx="340" cy="90" r="1.5" fill="#FFD54F" opacity="0.4" />
+  </g>
+
+  <ellipse cx="585" cy="310" rx="270" ry="230" fill="url(#lanternHalo)" />
+  <!-- BARNABY (sits behind the book) -->
+  <!-- Tail: Curling gracefully around the spine -->
+  <path d="M 285,550 C 210,560 145,510 135,440 C 128,380 170,350 185,365 C 195,376 182,410 195,435 C 215,475 250,490 290,495 Z" fill="#825337" stroke="#161524" stroke-width="3" stroke-linejoin="round" />
+  <!-- Tail Cel Shadow -->
+  <path d="M 135,440 C 128,380 170,350 185,365 C 190,370 185,385 180,405 C 158,415 142,450 155,475 C 190,520 240,520 285,550 C 275,555 250,550 230,535 C 170,510 142,475 135,440 Z" fill="#1E1D31" opacity="0.6" />
+
+  <!-- Chunky Cozy Cable-Knit Sweater: Base Torso -->
+  <path d="M 270,370 C 240,430 245,515 285,540 C 320,560 450,560 485,535 C 515,510 515,440 480,370 C 440,340 310,340 270,370 Z" fill="#EAD9BD" stroke="#1C1829" stroke-width="3.5" stroke-linejoin="round" />
+
+  <!-- Sweater: Stepped Toon Split Shadow (Cool Indigo Side) -->
+  <path d="M 270,370 C 240,430 245,515 285,540 C 315,558 390,558 410,545 C 370,510 345,435 345,355 C 320,355 290,360 270,370 Z" fill="#2A2F4C" opacity="0.85" />
+
+  <!-- Sweater Cable Knit Ridges (Linear Rythym) -->
+  <g fill="none" stroke="#373D5C" stroke-width="3" stroke-linecap="round" opacity="0.7">
+    <path d="M 295,410 C 285,445 285,490 300,520" />
+    <path d="M 320,395 C 315,440 315,495 330,530" />
+  </g>
+  <g fill="none" stroke="#D3B88C" stroke-width="3.5" stroke-linecap="round">
+    <path d="M 435,395 C 440,440 440,490 430,535" />
+    <path d="M 465,410 C 475,445 470,495 460,525" />
+  </g>
+  <!-- Sweater Amber Accent Edge (Toon Rim Light) -->
+  <path d="M 480,370 C 495,405 505,455 485,535 C 480,520 490,450 472,390 Z" fill="#FFA000" />
+
+  <!-- Oversized Folded Turtleneck Collar -->
+  <ellipse cx="375" cy="355" rx="75" ry="32" fill="#DFCEAF" stroke="#1C1829" stroke-width="3.5" />
+  <!-- Collar Shadow Cut -->
+  <path d="M 310,362 C 330,380 370,385 400,375 C 380,360 330,350 310,362 Z" fill="#2A2F4C" opacity="0.85" />
+  <path d="M 410,340 C 435,350 448,362 440,372 C 452,362 448,348 420,340 Z" fill="#FFB300" />
+  <g transform="translate(0,20)">
+  <!-- Left Ear (Silhouette Behind) -->
+  <ellipse cx="270" cy="210" rx="46" ry="52" transform="rotate(-20 270 210)" fill="#764930" stroke="#1C1829" stroke-width="3.5" />
+  <ellipse cx="274" cy="212" rx="32" ry="38" transform="rotate(-20 274 212)" fill="#32293F" opacity="0.8" />
+
+  <!-- Right Ear (Facing Key Light) -->
+  <ellipse cx="455" cy="195" rx="52" ry="58" transform="rotate(22 455 195)" fill="#A87352" stroke="#1C1829" stroke-width="3.5" />
+  <ellipse cx="450" cy="198" rx="38" ry="44" transform="rotate(22 450 198)" fill="#E29C83" />
+  <!-- Right Ear Amber Cel Rim -->
+  <path d="M 470,145 C 505,175 510,225 480,250 C 500,220 495,175 470,145 Z" fill="#FFA000" />
+
+  <!-- Head Base Shape (Plump, Pear-shaped Appeal) -->
+  <path d="M 285,270 C 265,220 320,165 375,165 C 435,165 470,215 455,270 C 475,305 455,350 415,355 C 375,360 345,360 315,355 C 275,345 265,300 285,270 Z" fill="#9B6645" stroke="#1C1829" stroke-width="3.5" stroke-linejoin="round" />
+
+  <!-- Head Stepped Cel Shadow (Night Indigo Wash) -->
+  <path d="M 285,270 C 265,220 320,165 375,165 C 382,165 388,168 392,172 C 365,195 345,230 340,300 C 338,335 325,350 315,355 C 275,345 265,300 285,270 Z" fill="#23223A" opacity="0.85" />
+
+  <!-- Cheeks: Fluffy Muzzle Volume -->
+  <path d="M 330,305 C 350,290 395,290 415,305 C 430,318 425,342 400,345 C 375,347 365,347 345,345 C 320,340 315,318 330,305 Z" fill="#E5C79E" stroke="#1C1829" stroke-width="2.5" />
+  <!-- Amber Warmth Over Muzzle -->
+  <path d="M 372,295 C 395,295 415,305 415,320 C 415,335 395,346 375,346 Z" fill="#FFE082" opacity="0.4" />
+
+  <!-- Expressive Velvety Mouse Nose -->
+  <ellipse cx="372" cy="302" rx="7.5" ry="5.5" fill="#3D1D24" />
+  <circle cx="370" cy="300" r="1.5" fill="#FFFDF7" />
+
+  <!-- Classic Disney Animated Eyes (Intense Curious Focus) -->
+  <!-- Left Eye (In shadow rim) -->
+  <ellipse cx="338" cy="256" rx="14" ry="18" transform="rotate(-6 338 256)" fill="#1A1829" stroke="#100F1A" stroke-width="2" />
+  <ellipse cx="340" cy="255" rx="11" ry="15" fill="#FFFBF0" />
+  <!-- Left Iris & Pupil -->
+  <ellipse cx="344" cy="258" rx="7.5" ry="10" fill="#2C1D11" />
+  <ellipse cx="345" cy="259" rx="4.5" ry="7" fill="#0A0808" />
+  <!-- Eye Catchlights -->
+  <circle cx="342" cy="253" r="3" fill="#FFFFFF" />
+  <circle cx="346" cy="263" r="1.5" fill="#FFE082" />
+
+  <!-- Right Eye (Full Amber Glow Side) -->
+  <ellipse cx="395" cy="254" rx="15" ry="19" transform="rotate(6 395 254)" fill="#1A1829" stroke="#100F1A" stroke-width="2" />
+  <ellipse cx="393" cy="253" rx="12" ry="16" fill="#FFFDF0" />
+  <!-- Right Iris & Pupil -->
+  <ellipse cx="391" cy="257" rx="8" ry="10.5" fill="#422208" />
+  <!-- Amber Iris Reflective Ring -->
+  <ellipse cx="390" cy="258" rx="6.5" ry="9" fill="#B25900" />
+  <ellipse cx="390" cy="258" rx="4.5" ry="7" fill="#0D0907" />
+  <!-- Main Disney Specular Pill -->
+  <ellipse cx="388" cy="251" rx="3.5" ry="4.5" transform="rotate(-15 388 251)" fill="#FFFFFF" />
+  <circle cx="393" cy="262" r="1.8" fill="#FFCA28" />
+
+  <!-- Soft Eyebrows (Curved with academic concentration) -->
+  <path d="M 322,235 C 330,227 348,230 355,236" fill="none" stroke="#231818" stroke-width="3.5" stroke-linecap="round" />
+  <path d="M 382,234 C 390,226 410,228 418,235" fill="none" stroke="#FFA000" stroke-width="3.5" stroke-linecap="round" />
+
+  <!-- Whiskers -->
+  <g fill="none" stroke="#FFEBB8" stroke-width="1.5" stroke-linecap="round" opacity="0.8">
+    <path d="M 325,315 C 285,312 250,325 225,345" />
+    <path d="M 322,324 C 290,328 260,345 240,370" />
+    <path d="M 415,315 C 445,310 475,320 500,335" stroke="#FFA000" />
+    <path d="M 412,324 C 440,325 465,338 485,355" stroke="#FFCA28" />
+  </g>
+
+  <!-- ================= VINTAGE WIRE-RIM SPECTACLES ================= -->
+  <!-- Left Rim -->
+  <circle cx="337" cy="257" r="23" fill="none" stroke="#483823" stroke-width="3.5" />
+  <!-- Right Rim -->
+  <circle cx="396" cy="255" r="24" fill="none" stroke="#FFB300" stroke-width="3.5" />
+  <!-- Nose Bridge Curve -->
+  <path d="M 360,253 C 367,247 372,247 376,252" fill="none" stroke="#FFCA28" stroke-width="3.5" stroke-linecap="round" />
+  <!-- Amber Lens Glint Reflection (Right Glass) -->
+  <path d="M 405,236 C 413,243 416,254 414,264" fill="none" stroke="#FFF9C4" stroke-width="2.5" stroke-linecap="round" opacity="0.9" />
+  <line x1="411" y1="239" x2="415" y2="243" stroke="#FFF" stroke-width="2" stroke-linecap="round" />
+  </g>
+  <!-- BOOK (drawn after Barnaby so he sits behind it) -->
+  <!-- ================= BASE LAYER: THE ANCIENT TOME ================= -->
+  <!-- Book Spine & Binding Backing -->
+  <path d="M 170,620 C 260,655 350,650 400,642 C 450,650 540,655 630,620 C 640,655 530,685 400,675 C 270,685 160,655 170,620 Z" fill="#1A1829" stroke="#0E0D17" stroke-width="3" />
+
+  <!-- Left Open Pages Block -->
+  <path d="M 180,610 C 270,635 360,630 398,618 L 398,495 C 340,505 240,500 190,470 Z" fill="#CFC3A7" />
+  <path d="M 185,605 C 275,630 360,625 398,612 L 398,490 C 340,500 245,495 195,465 Z" fill="#DFD5BE" />
+  <path d="M 190,600 C 280,622 360,618 398,605 L 398,485 C 340,494 250,488 200,460 Z" fill="url(#paperCream)" stroke="#4A3E2D" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Left Page Written Lines (Toon Stylized Script) -->
+  <g stroke="#8A7761" stroke-width="2.5" stroke-linecap="round" opacity="0.65">
+    <line x1="225" y1="480" x2="365" y2="505" />
+    <line x1="222" y1="496" x2="350" y2="520" />
+    <line x1="220" y1="512" x2="360" y2="535" />
+    <line x1="224" y1="528" x2="330" y2="550" />
+    <line x1="230" y1="544" x2="355" y2="565" />
+    <line x1="235" y1="560" x2="310" y2="578" />
+  </g>
+
+  <!-- Right Open Pages Block (Direct Amber Light Catcher) -->
+  <path d="M 620,610 C 530,635 440,630 402,618 L 402,495 C 460,505 560,500 610,470 Z" fill="#D4B57E" />
+  <path d="M 615,605 C 525,630 440,625 402,612 L 402,490 C 460,500 555,495 605,465 Z" fill="#E7CE9D" />
+  <path d="M 610,600 C 520,622 440,618 402,605 L 402,485 C 460,494 550,488 600,460 Z" fill="#FFF9E8" stroke="#5C4728" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Right Page Cel Shadow & Amber Wash -->
+  <path d="M 402,485 C 425,489 445,495 450,608 C 430,607 412,606 402,605 Z" fill="url(#bookShadow)" />
+
+  <!-- Right Page Calligraphy Lines -->
+  <g stroke="#916D3B" stroke-width="2.5" stroke-linecap="round" opacity="0.75">
+    <line x1="435" y1="504" x2="575" y2="480" />
+    <line x1="440" y1="520" x2="560" y2="497" />
+    <line x1="442" y1="536" x2="570" y2="513" />
+    <line x1="440" y1="552" x2="540" y2="530" />
+    <line x1="438" y1="568" x2="565" y2="546" />
+    <line x1="435" y1="583" x2="510" y2="564" />
+  </g>
+
+  <!-- Silk Ribbon Bookmark Swirl -->
+  <path d="M 400,608 C 400,650 370,685 410,720 C 435,742 470,725 490,735" fill="none" stroke="#A92A2A" stroke-width="8" stroke-linecap="round" />
+  <path d="M 400,608 C 400,650 370,685 410,720 C 435,742 470,725 490,735" fill="none" stroke="#FF5E5E" stroke-width="2" stroke-linecap="round" opacity="0.5" />
+  <!-- Paws gripping the top edge of the book -->
+  <g transform="translate(0,-46)">
+  <!-- Tiny Left Forepaw (Resting on Book) -->
+  <ellipse cx="320" cy="530" rx="18" ry="12" fill="#A87352" stroke="#1C1829" stroke-width="3" />
+  <circle cx="312" cy="532" r="3" fill="#D39875" />
+  <circle cx="320" cy="534" r="3" fill="#D39875" />
+  <circle cx="328" cy="533" r="3" fill="#D39875" />
+
+  <!-- Tiny Right Forepaw (Curling gently over warm glowing page) -->
+  <ellipse cx="445" cy="530" rx="18" ry="12" fill="#E59966" stroke="#1C1829" stroke-width="3" />
+  <!-- Amber Edge On Right Paw -->
+  <path d="M 440,520 C 455,520 462,528 458,538 C 465,530 458,520 440,520 Z" fill="#FFE082" />
+  <circle cx="438" cy="534" r="2.5" fill="#FFE082" />
+  <circle cx="446" cy="535" r="2.5" fill="#FFE082" />
+  <circle cx="454" cy="533" r="2.5" fill="#FFE082" />
+  </g>
+  <!-- LANTERN standing at the top-right corner of the book, beside it -->
+  <g transform="translate(105,-20)">
+  <!-- Hanging Brass Arm / Post -->
+  <path d="M 545,490 L 545,260 C 545,225 515,200 480,210" fill="none" stroke="#251A10" stroke-width="6" stroke-linecap="round" />
+  <path d="M 543,490 L 543,260 C 543,227 516,203 482,212" fill="none" stroke="#8D6028" stroke-width="2" stroke-linecap="round" />
+  <path d="M 480,210 L 480,230" fill="none" stroke="#DCA238" stroke-width="3.5" />
+
+  <!-- Lantern Top Cap & Finial -->
+  <polygon points="480,225 465,242 495,242" fill="#DCA238" stroke="#3E270A" stroke-width="2" />
+  <path d="M 458,242 C 470,237 490,237 502,242 L 508,252 L 452,252 Z" fill="#9C6B1C" stroke="#3E270A" stroke-width="2" stroke-linejoin="round" />
+
+  <!-- Glass Chamber (Surrounding Glow) -->
+  <rect x="456" y="252" width="48" height="58" rx="6" fill="#FFA000" fill-opacity="0.25" stroke="#5D3A0A" stroke-width="2.5" />
+
+  <!-- The Amber Flame Core -->
+  <circle cx="480" cy="280" r="32" fill="url(#amberGlow)" />
+  <!-- Animated Stylized Teardrop Flame -->
+  <path d="M 480,264 C 485,274 490,279 490,285 C 490,292 485,296 480,296 C 475,296 470,292 470,285 C 470,279 475,274 480,264 Z" fill="#FFFFFF" />
+  <path d="M 480,269 C 483,276 487,280 487,285 C 487,290 483,293 480,293 C 477,293 473,290 473,285 C 473,280 477,276 480,269 Z" fill="#FFD54F" />
+
+  <!-- Lantern Metal Cage Struts -->
+  <line x1="480" y1="252" x2="480" y2="310" stroke="#7A4C0B" stroke-width="2" />
+  <line x1="462" y1="252" x2="466" y2="310" stroke="#7A4C0B" stroke-width="1.5" />
+  <line x1="498" y1="252" x2="494" y2="310" stroke="#7A4C0B" stroke-width="1.5" />
+
+  <!-- Lantern Base Plate -->
+  <path d="M 452,310 L 508,310 L 502,322 L 458,322 Z" fill="#9C6B1C" stroke="#3E270A" stroke-width="2" stroke-linejoin="round" />
+
+  <!-- Amber Drop Highlight: Reflective Edge on Table Under Lantern -->
+  <ellipse cx="485" cy="505" rx="35" ry="12" fill="#FF8F00" opacity="0.3" filter="url(#moteBlur)" />
+
+  <!-- Warm Floating Spark / Wonder Speckles -->
+  <circle cx="498" cy="235" r="2" fill="#FFF9C4" />
+  <circle cx="440" cy="270" r="1.5" fill="#FFD54F" />
+  <circle cx="460" cy="215" r="2" fill="#FFB300" opacity="0.8" />
+  <circle cx="515" cy="330" r="1.5" fill="#FFE082" opacity="0.7" />
+  <circle cx="430" cy="360" r="2.5" fill="#FFB300" opacity="0.5" filter="url(#moteBlur)" />
+  </g>
+  <ellipse cx="655" cy="478" rx="40" ry="10" fill="#FF8F00" opacity="0.3" filter="url(#moteBlur)" />
+  <!-- Tea beside the book -->
+  <g transform="translate(-115,170)">
+  <ellipse cx="230" cy="460" rx="20" ry="8" fill="#151926" stroke="#0E111A" stroke-width="2" />
+  <path d="M 214,460 C 215,482 223,495 233,495 C 243,495 249,482 250,460 Z" fill="#EAD9BD" stroke="#1F2335" stroke-width="2" />
+  <!-- Tea Liquid Rim -->
+  <ellipse cx="232" cy="461" rx="14" ry="4.5" fill="#5D2F17" />
+  <!-- Tiny Steam Plume (Wisp) -->
+  <path d="M 230,453 C 224,440 236,432 230,420 C 227,414 223,412 225,405" fill="none" stroke="#DFD5BE" stroke-width="2" stroke-linecap="round" opacity="0.4" />
+  </g>
+</svg>

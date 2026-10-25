@@ -1,0 +1,29 @@
+.button-secondary {
+  background: var(--surface-2);
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.button-secondary:hover:not(:disabled) {
+  background: var(--border);
+}
+
+.inline-confirm {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-card);
+}
+
+.inline-confirm p {
+  margin: 0;
+}
+
+.inline-confirm__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}

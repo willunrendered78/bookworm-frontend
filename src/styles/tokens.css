@@ -1,0 +1,162 @@
+/*
+ * BookWorm design tokens. Dark theme only.
+ * Every color, size, radius and font used by components comes from here;
+ * components reference these variables and never hard-code values.
+ * Contrast (checked): --text, --heading, --muted and --amber on --bg/--surface
+ * pass WCAG AA for text; --bg on --amber passes for button labels;
+ * --input-border (not --border-strong) is used for input outlines to reach 3:1.
+ */
+
+:root {
+  color-scheme: dark;
+
+  /* Color */
+  --bg: #05070d;
+  --surface: #0b101d;
+  --surface-2: #141c2e;
+  --border: #1d2740;
+  --border-strong: #3a4a70;
+  --input-border: #6b7ba3;
+  --text: #f4ebd9;
+  --heading: #fffdf7;
+  --muted: #a9b3c9;
+  --amber: #ffb300;
+  --amber-hover: #ffd166;
+  --on-amber: var(--bg);
+  --danger: #ff8a80;
+
+  /* Fonts */
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Type scale */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+  --text-2xl: 2.25rem;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  /* Shape and controls */
+  --radius-control: 10px;
+  --radius-card: 12px;
+  --radius-pill: 999px;
+  --control-min-height: 44px;
+  --content-width: 72rem;
+  --form-width: 26rem;
+
+  /* Focus */
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-color: var(--amber);
+}
+
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 var(--space-4);
+  color: var(--heading);
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--text-2xl);
+}
+
+h2 {
+  font-size: var(--text-xl);
+}
+
+a {
+  color: var(--amber);
+}
+
+a:hover {
+  color: var(--amber-hover);
+}
+
+:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+button,
+input {
+  font: inherit;
+  min-height: var(--control-min-height);
+  border-radius: var(--radius-control);
+}
+
+input {
+  width: 100%;
+  padding: 0 var(--space-3);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--input-border);
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+button {
+  padding: 0 var(--space-4);
+  background: var(--amber);
+  color: var(--on-amber);
+  border: 1px solid transparent;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: var(--amber-hover);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Book lists */
+:root {
+  --cover-aspect: 2 / 3;
+  --shelf-card-width: 9.5rem;
+  --grid-card-min: 9.5rem;
+}

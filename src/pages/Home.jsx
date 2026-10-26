@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import Hero from '../components/Hero.jsx'
 import Shelf from '../components/Shelf.jsx'
 import { useBookList } from '../hooks/useBookList.js'
 import { genreLabel } from '../lib/books.js'
@@ -23,7 +24,7 @@ export default function Home() {
 
   return (
     <main>
-      <h1 className="visually-hidden">Browse books</h1>
+      <Hero />
       {SHELVES.map((shelf, index) => (
         <HomeShelf
           key={shelf.slug}

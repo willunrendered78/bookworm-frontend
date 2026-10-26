@@ -2,6 +2,7 @@
 
 :root {
   --barnaby-sm: 6rem;
+  --barnaby-md: 12rem;
   --barnaby-lg: 10rem;
   --barnaby-xl-min: 13rem;
   --barnaby-xl-max: 20rem;
@@ -18,6 +19,11 @@
 .barnaby--sm {
   width: var(--barnaby-sm);
   height: var(--barnaby-sm);
+}
+
+.barnaby--md {
+  width: var(--barnaby-md);
+  height: var(--barnaby-md);
 }
 
 .barnaby--lg {

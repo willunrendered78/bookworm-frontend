@@ -29,7 +29,7 @@ export default function BookResults({ list, label, emptyMessage }) {
       {status === 'error' && <ErrorState kind={error} onRetry={retry} />}
       {hasMore && status !== 'error' && (
         <div className="page__more">
-          <button type="button" onClick={loadMore} disabled={status === 'loadingMore'}>
+          <button type="button" className="button-secondary" onClick={loadMore} disabled={status === 'loadingMore'}>
             {status === 'loadingMore' ? 'Loading…' : 'Load more'}
           </button>
         </div>

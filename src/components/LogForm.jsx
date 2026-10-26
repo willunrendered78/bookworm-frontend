@@ -77,7 +77,7 @@ export default function LogForm({ bookId, log, onSaved, onCancel }) {
           {pending ? 'Saving…' : editing ? 'Save changes' : 'Post log'}
         </button>
         {editing && (
-          <button type="button" className="button-secondary" onClick={onCancel} disabled={pending}>
+          <button type="button" className="button-quiet" onClick={onCancel} disabled={pending}>
             Cancel
           </button>
         )}

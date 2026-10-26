@@ -20,10 +20,10 @@ export default function InlineConfirm({ message, confirmLabel = 'Confirm', pendi
     >
       <p>{message}</p>
       <div className="inline-confirm__buttons">
-        <button type="button" onClick={onConfirm} disabled={pending}>
+        <button type="button" className="button-danger" onClick={onConfirm} disabled={pending}>
           {pending ? 'Working…' : confirmLabel}
         </button>
-        <button type="button" className="button-secondary" onClick={onCancel} disabled={pending} ref={cancelRef}>
+        <button type="button" className="button-quiet" onClick={onCancel} disabled={pending} ref={cancelRef}>
           Cancel
         </button>
       </div>

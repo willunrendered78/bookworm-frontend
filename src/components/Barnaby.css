@@ -1,0 +1,37 @@
+/* Barnaby mascot frame. The SVG carries its own dark square, so the frame rounds and clips it. */
+
+:root {
+  --barnaby-sm: 6rem;
+  --barnaby-lg: 10rem;
+  --barnaby-xl-min: 13rem;
+  --barnaby-xl-max: 20rem;
+  --empty-state-min-height: 60vh;
+}
+
+.barnaby {
+  display: block;
+  flex: none;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+}
+
+.barnaby--sm {
+  width: var(--barnaby-sm);
+  height: var(--barnaby-sm);
+}
+
+.barnaby--lg {
+  width: var(--barnaby-lg);
+  height: var(--barnaby-lg);
+}
+
+.barnaby--xl {
+  width: clamp(var(--barnaby-xl-min), 40vw, var(--barnaby-xl-max));
+  height: clamp(var(--barnaby-xl-min), 40vw, var(--barnaby-xl-max));
+}
+
+.barnaby img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

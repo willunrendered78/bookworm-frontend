@@ -57,6 +57,15 @@
   --focus-ring-width: 2px;
   --focus-ring-offset: 2px;
   --focus-ring-color: var(--amber);
+
+  /* Motion */
+  --motion-fast: 150ms;
+  --motion-base: 300ms;
+  --motion-slow: 1.6s;
+  --motion-stagger: 60ms;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --card-lift: -0.25rem;
+  --glow-amber: 0 0 0.75rem color-mix(in srgb, var(--amber) 35%, transparent);
 }
 
 /* Base */

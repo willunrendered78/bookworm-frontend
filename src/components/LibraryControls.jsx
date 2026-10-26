@@ -41,7 +41,7 @@ export default function LibraryControls({ library, logCount = 0, onRemoved }) {
         <p className="library-controls__error" role="alert">
           {dbMessage(error)}
         </p>
-        <button type="button" onClick={library.reload}>
+        <button type="button" className="button-secondary" onClick={library.reload}>
           Retry
         </button>
       </div>

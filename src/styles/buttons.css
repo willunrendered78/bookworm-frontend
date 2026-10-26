@@ -1,0 +1,55 @@
+/*
+ * Button variants. A bare <button> is the primary style (tokens.css); these classes change it.
+ * Hover rules use :hover:not(:disabled) so they outrank the base button hover.
+ * Every variant keeps the 44px minimum height and the global focus ring.
+ */
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--control-min-height);
+  padding: 0 var(--space-4);
+  background: var(--amber);
+  color: var(--on-amber);
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button-primary:hover:not(:disabled) {
+  background: var(--amber-hover);
+  color: var(--on-amber);
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.button-secondary:hover:not(:disabled) {
+  background: var(--surface-2);
+}
+
+.button-quiet {
+  background: transparent;
+  color: var(--muted);
+  border-color: transparent;
+}
+
+.button-quiet:hover:not(:disabled) {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.button-danger {
+  background: transparent;
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.button-danger:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--danger) 15%, transparent);
+}

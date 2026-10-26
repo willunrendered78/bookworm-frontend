@@ -29,12 +29,14 @@
   color: var(--muted);
 }
 
+/* Padding makes room for the card lift and glow (overflow-x clips y too); negative margins keep the layout in place. */
 .shelf__row,
 .skeleton-list {
   display: flex;
   gap: var(--space-4);
-  margin: 0;
-  padding: 0 0 var(--space-3);
+  margin: calc(-1 * var(--space-4)) calc(-1 * var(--space-3)) calc(-1 * var(--space-1));
+  padding: var(--space-4) var(--space-3);
+  scroll-padding-inline: var(--space-3);
   list-style: none;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -154,7 +156,6 @@
   display: block;
   background: var(--surface-2);
   border-radius: var(--radius-control);
-  animation: skeleton-pulse 1.4s ease-in-out infinite;
 }
 
 .skeleton-card__cover {
@@ -168,19 +169,6 @@
 
 .skeleton-card__line--short {
   width: 60%;
-}
-
-@keyframes skeleton-pulse {
-  50% {
-    opacity: 0.5;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .skeleton-card__cover,
-  .skeleton-card__line {
-    animation: none;
-  }
 }
 
 .error-state {

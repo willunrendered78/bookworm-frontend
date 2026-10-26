@@ -41,7 +41,7 @@ export default function Nav() {
         {!loading && user && (
           <>
             <span className="nav__name">{profile?.display_name ?? 'Account'}</span>
-            <button type="button" onClick={handleSignOut} disabled={pending}>
+            <button type="button" className="button-secondary" onClick={handleSignOut} disabled={pending}>
               {pending ? 'Logging out…' : 'Log out'}
             </button>
           </>

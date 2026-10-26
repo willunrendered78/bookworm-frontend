@@ -76,7 +76,7 @@ export default function LogsSection({ bookId, logsState, library }) {
       <div className="log-actions">
         <button
           type="button"
-          className="button-secondary"
+          className="button-quiet"
           onClick={() => {
             setDeletingId(null)
             setMessage('')
@@ -88,7 +88,7 @@ export default function LogsSection({ bookId, logsState, library }) {
         </button>
         <button
           type="button"
-          className="button-secondary"
+          className="button-quiet"
           onClick={() => {
             setEditingId(null)
             setMessage('')

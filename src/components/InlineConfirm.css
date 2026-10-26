@@ -1,13 +1,3 @@
-.button-secondary {
-  background: var(--surface-2);
-  color: var(--text);
-  border-color: var(--border-strong);
-}
-
-.button-secondary:hover:not(:disabled) {
-  background: var(--border);
-}
-
 .inline-confirm {
   display: grid;
   gap: var(--space-3);

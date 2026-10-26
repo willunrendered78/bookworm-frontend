@@ -77,6 +77,14 @@
 
 .library-empty {
   display: grid;
-  gap: var(--space-3);
-  justify-items: start;
+  align-content: center;
+  justify-items: center;
+  gap: var(--space-4);
+  min-height: var(--empty-state-min-height);
+  text-align: center;
+}
+
+.library-empty h1,
+.library-empty p {
+  margin: 0;
 }

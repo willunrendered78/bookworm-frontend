@@ -1,4 +1,5 @@
 import { Link, useSearchParams } from 'react-router-dom'
+import Barnaby from '../components/Barnaby.jsx'
 import ErrorState from '../components/ErrorState.jsx'
 import LibraryRow from '../components/LibraryRow.jsx'
 import { STATUSES } from '../components/LibraryControls.jsx'
@@ -36,7 +37,7 @@ export default function Library() {
       {library.status === 'error' && library.items.length === 0 && (
         <div className="error-state" role="alert">
           <p>{dbMessage(library.error)}</p>
-          <button type="button" onClick={library.reload}>
+          <button type="button" className="button-secondary" onClick={library.reload}>
             Retry
           </button>
         </div>
@@ -46,8 +47,11 @@ export default function Library() {
         <>
           {library.items.length === 0 ? (
             <div className="library-empty">
+              <Barnaby size="xl" />
               <p className="page__note">Your library is empty. Add books from their pages to keep track of them here.</p>
-              <Link to="/">Browse books</Link>
+              <Link to="/" className="button-primary">
+                Browse books
+              </Link>
             </div>
           ) : (
             <>

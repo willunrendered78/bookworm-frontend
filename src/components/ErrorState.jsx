@@ -13,7 +13,7 @@ export default function ErrorState({ kind = 'unknown', onRetry, retryLabel = 'Re
     <div className="error-state" role="alert">
       <p>{MESSAGES[kind] ?? MESSAGES.unknown}</p>
       {onRetry && (
-        <button type="button" onClick={onRetry}>
+        <button type="button" className="button-secondary" onClick={onRetry}>
           {retryLabel}
         </button>
       )}
